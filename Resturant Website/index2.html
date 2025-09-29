@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platinum Restaurant</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background: #3b04bb; color: white; padding: 20px; text-align: center; }
+    nav { background: #333; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    section { padding: 40px; }
+    .menu { display: flex; gap: 30px; flex-wrap: wrap; }
+    .menu-item { border: 1px solid #ddd; padding: 100px; width: 400px; border-radius: 10px; }
+    .reviews { background: #f9f9f9; padding: 20px; border-radius: 8px; }
+    footer { background: #333; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+    input, textarea, select, button { width: 100%; padding: 10px; margin: 8px 0; border-radius: 5px; border: 1px solid #ccc; }
+    button { background: #d0ef06; color: white; cursor: pointer; border: none; }
+    button:hover { background: #a52a2a; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🍷 PLatinum Restaurant</h1>
+    <p> Indian Food in the Heart of the City Gorakhpur </p>
+  </header>
+
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#reservation">Reservations</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+ 
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu">
+      <div class="menu-item">
+        <img src="https://deliveryraja.com/wp-content/uploads/2024/09/oAlxDEPy.webp" alt="Panner pizza"
+    style="width:100%; border-radius:8px;">
+        <h3>Panner Pizza</h3>
+        <p>Fresh paneer with extra creame. </p>
+        <strong>₹199</strong>
+      </div>
+      <div class="menu-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdCtI6xe4T9REg52lYLX2JZxyMDedf0hzPbA&s" alt="Full Thali"
+    style="width:100%; border-radius:8px;">
+        <h3>Full Thali</h3>
+        <p>4 chapati,green vegetables and rice with extra pickle. </p>
+        <strong>₹70</strong>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/veg-manchurian.jpg" alt="Monchurian"
+    style="width:100%; border-radius:8px;">
+        <h3>Monchurian</h3>
+        <p>Cabbage chilli Monchurian</p>
+        <strong>₹50</strong>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="reservation">
+    <h2>Online Reservations</h2>
+    <form onsubmit="submitReservation(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="date" id="date" required>
+      <select id="time" required>
+        <option value="">Select Time</option>
+        <option>5:00 PM</option>
+        <option>6:00 PM</option>
+        <option>7:00 PM</option>
+      </select>
+      <input type="number" id="guests" placeholder="Number of Guests" required min="1">
+      <button type="submit">Book Now</button>
+    </form>
+    <p id="confirmation" style="color:green; font-weight:bold;"></p>
+  </section>
+
+ 
+  <section id="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="reviews">
+      <p><strong>vipin Nishad:</strong> "The best Thali I've ever had. Highly recommend Platinum Resturant."</p>
+      <p><strong>Aarav Gaur:</strong> "Lovely atmosphere and friendly staff. Perfect for birthday celebration."</p>
+      <p><strong>Shubham Yadav:</strong> "Amazing Pizza, especially the Panner Pizza. Will come back soon."</p>
+       <p><strong>Utsav Rai:</strong> "Lighting and freshness of resturant is awesome."</p>
+    </div>
+  </section>
+
+ 
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: Ashwaniyadav1909@gmail.com</p>
+    <p>Phone: +919559775334</p>
+    <p>Location: Near RPM Academy,Kauriram,gorakhpur</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Platinum Resturant | Designed with ❤</p>
+  </footer>
+
+  <script>
+    function submitReservation(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      document.getElementById("confirmation").innerText = Thank you, ${name}! Your reservation has been received.;
+    }
+  </script>
+
+</body>
+</html>
