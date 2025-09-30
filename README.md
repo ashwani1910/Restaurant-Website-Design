@@ -23,7 +23,6 @@ A modern and responsive restaurant website for **Platinum Restaurant**, offering
 
 - **HTML5**
 - **CSS3**
-- **JavaScript**
 
 ---
 
